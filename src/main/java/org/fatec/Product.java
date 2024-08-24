@@ -1,11 +1,19 @@
 package org.fatec;
 
+import javax.swing.JOptionPane;
+
 public class Product {
     int code;
     String description;
     float costPrice;
     float salePrice;
     int stock;
+
+    // final float test --> Indica uma constante - Não pode ser alterado após ser definido
+    // Java utiliza camelCase
+    // Os nomes das classes devem iniciar em maisucula
+    // O nome da classe deve ser o mesmo do arquivo
+
 
     public Product(int code, String description, float costPrice, float salePrice, int stock) {
         this.code = code;
@@ -37,6 +45,8 @@ public class Product {
         System.out.println("Product" + product.description + " stock: " + product.stock);
         product.sale(10, 5, product);
         System.out.println("Product" + product.description + " stock: " + product.stock);
+
+         JOptionPane.showMessageDialog(null,  product.description + " stock: " + product.stock);
      }
 
 
