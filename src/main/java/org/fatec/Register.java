@@ -58,7 +58,7 @@ public class Register {
 
     public int calculateMonthlyFee() {
         if (isScholarship()) {
-            return 300/2;
+            return 300 / 2;
         }
         return 300;
     }
@@ -67,12 +67,12 @@ public class Register {
         System.out.println("Name: " + getNameStudent());
         System.out.println("Number Register: " + getNumberRegister());
         System.out.println("Birth Date: " + getBirthDate());
-        System.out.println("Scholarship: " + isScholarship());
+        System.out.println("Scholarship: " + (isScholarship() ? "Yes" : "No"));
         System.out.println("Year Register: " + getYearRegister());
     }
 
     public static void main(String[] args) {
-        Register registerStudent = new Register("John Doe", 123456, "01/01/2000", true, 2021);
+        Register registerStudent = new Register("John Doe", 1234567890, "01/01/2000", true, 2021);
         int monthlyFee = registerStudent.calculateMonthlyFee();
         System.out.println("Monthly Fee: " + monthlyFee);
         registerStudent.getRegister();
